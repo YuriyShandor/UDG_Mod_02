@@ -1,4 +1,4 @@
-.header-nav {
+.header-menu__nav {
   .toggler-icon {
     display: none;
   }
@@ -14,23 +14,19 @@
     .nav-item {
       position: relative;
       list-style: none;
-      margin-left: 60px;
+      margin-right: 40px;
 
       &::after {
         margin: 0 auto;
-        -webkit-transform: translateY(3px);
-                transform: translateY(3px);
+        -webkit-transform: translateY(-27px);
+                transform: translateY(-27px);
         content: '';
         display: block;
         width: 0;
-        height: 2px;
-        background: #fff;
+        height: 1px;
+        background: #bed62f;
         -webkit-transition: all, .3s;
         transition: all, .3s;
-      }
-
-      &:first-child {
-        margin-left: 0;
       }
 
       &:hover {
@@ -41,17 +37,17 @@
 
       .nav-link {
         padding: 0;
-        font-family: Raleway;
-        font-size: 16px;
-        font-weight: 400;
-        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 300;
+        color: #ecf0e8;
       }
     }
   }
 }
 
 @media only screen and (max-width : 1199px) {
-  .header-nav {
+  .header-menu__nav {
     .nav-bar {
       .nav-item {
         margin-left: 50px;
@@ -61,7 +57,7 @@
 }
 
 @media only screen and (max-width : 991px) {
-  .header-nav {
+  .header-menu__nav {
     width: 100%;
     position: relative;
 
@@ -144,7 +140,7 @@
       left: 0;
       width: 100%;
       z-index: 10;
-      background: $blue;
+      background: #fff;
 
       .nav-item {
         position: relative;
@@ -163,7 +159,7 @@
           width: 0;
           margin: 0 auto;
           height: 2px;
-          background: $blue;
+          background: #fff;
           -webkit-transition: all, 1.5s;
           transition: all, 1.5s;
         }
@@ -188,7 +184,7 @@
 
 
 @media only screen and (max-width : 767px) {
-  .header-nav {
+  .header-menu__nav {
     .toggler-icon {
       width: 45px;
       height: 45px;
@@ -197,7 +193,7 @@
 }
 
 @media only screen and (max-width : 567px) {
-  .header-nav {
+  .header-menu__nav {
     .toggler-icon {
       width: 40px;
       height: 40px;

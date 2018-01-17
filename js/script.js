@@ -13,4 +13,6 @@ $(document).ready(function() {
   $('.header-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
     $('.slider-count #current').html(currentSlide+1);
   });
+
+  $('select').niceSelect();
 });

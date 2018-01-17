@@ -6,7 +6,8 @@ $darkGreen: #439c92;
 
 @import "./_components/_acrom.scss";
 @import "./_components/_roboto.scss";
-//@import "./_components/_nav-bar.scss";
+@import "./_components/_nav-bar.scss";
+@import "./nice-select.scss";
 
 * {
   -webkit-box-sizing: border-box;
@@ -250,6 +251,110 @@ body {
 .header-menu {
   position: absolute;
   z-index: 7;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+
+  &__logo {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-left: 30px;
+
+    img {
+      width: 117px;
+    }
+
+    span {
+      font-size: 13px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      width: 90px;
+    }
+  }
+
+  .header-cover {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  &__select{
+    background: transparent;
+    border: 1px solid #bed62f;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 300;
+    color: #ecf0e8;
+
+    .list {
+      background: transparent;
+      width: 32px;
+    }
+
+    .option {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 0;
+      font-size: 17px;
+      font-weight: 300;
+      color: #ecf0e8;
+
+      &:hover, &.focus, &.selected.focus {
+        background: rgba(190, 214, 47, 0.3);
+      }
+    }
+
+    &:after {
+      display: none;
+    }
+
+    &:hover, &:active, &:focus {
+      border: 1px solid #bed62f;
+    }
+  }
 }
 
 
