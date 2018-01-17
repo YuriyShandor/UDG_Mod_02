@@ -1,0 +1,211 @@
+@font-face {
+  font-family: Acrom;
+  src: url(../fonts/Acrom/acrom900.otf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(../fonts/Acrom/acrom800.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(../fonts/Acrom/acrom600.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(../fonts/Acrom/acrom400.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(../fonts/Acrom/acrom300.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Italic.ttf);
+  font-style: italic;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial sans-serif;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media only screen and (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .container {
+    width: 290px;
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header-slider {
+  outline: none;
+  width: 100%;
+}
+
+.header-slider__slide {
+  outline: none;
+  width: 100%;
+  height: 800px;
+  padding-top: 275px;
+  background: url(../img/slider__bg.jpg) no-repeat center/cover;
+}
+
+.header-slider__slide .slide-content {
+  margin-left: 179px;
+  padding-left: 55px;
+  height: 213px;
+  width: 750px;
+  border-left: 6px solid #8dc63f;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-slider__slide .slide-content h2 {
+  font-family: Acrom;
+  font-size: 65px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header .slider-nav {
+  width: 1170px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 297px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.header .slider-nav img {
+  cursor: pointer;
+  height: 7px;
+}
+
+.header .slider-nav .arrow-prev {
+  margin-left: 260px;
+  margin-right: 70px;
+}
+
+.header .slider-nav .slider-count {
+  -webkit-transform: translate(-78px, -25px);
+  transform: translate(-78px, -25px);
+  font-family: Acrom;
+}
+
+.header .slider-nav .slider-count p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.header .slider-nav .slider-count p span {
+  font-size: 23px;
+}
+
+.header .slider-nav .slider-count p #current {
+  color: #8dc63f;
+}
+
+.header .mouse {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+
+.header .mouse:hover {
+  -webkit-filter: brightness(-1000%);
+  filter: brightness(-1000%);
+}
