@@ -1058,3 +1058,88 @@ body {
     display: none;
   }
 }
+
+#our-projects {
+  padding-top: 95px;
+  padding-bottom: 85px;
+}
+
+.section-title {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-title__rectangles {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.section-title__rectangles .rectangles_darkGreen {
+  width: 25px;
+  height: 25px;
+  background: #439c92;
+}
+
+.section-title__rectangles .rectangle-cover {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-title__rectangles .rectangle-cover .rectangles_green {
+  background: #8dc63f;
+}
+
+.section-title__rectangles .rectangle-cover .rectangles_green:nth-child(1) {
+  width: 19px;
+  height: 19px;
+  margin-top: 9px;
+  margin-right: 7px;
+}
+
+.section-title__rectangles .rectangle-cover .rectangles_green:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  margin-top: 12px;
+  margin-right: 2px;
+}
+
+.section-title h2 {
+  font-family: Acrom;
+  font-size: 45px;
+  font-weight: 800;
+  color: #414042;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.udg-btn {
+  padding: 8px 15px;
+  background: #439c92;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Acrom;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all, .5s;
+  transition: all, .5s;
+}
+
+.udg-btn:hover {
+  background: #347871;
+}
