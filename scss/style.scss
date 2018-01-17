@@ -99,6 +99,7 @@ body {
   }
 
   .slider-nav {
+    z-index: 5;
     width: 1170px;
     display: -ms-flex;
     display: -webkit-box;
@@ -153,8 +154,103 @@ body {
               filter: brightness(-1000%);
     }
   }
+
+  .header-rectangles {
+    width: 1170px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 172px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+    &__cover {
+      height: 540px;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+
+      .header-rectangles__block {
+        position: relative;
+
+        div {
+          position: absolute;
+          width: 18px;
+          height: 18px;
+        }
+
+        .rectangles_green {
+          background: $lightGreen;
+        }
+
+        .rectangles_white {
+          background: #fff;
+        }
+
+        &_left_top {
+          div:nth-child(1) {
+            -webkit-transform: translate(85px, 25px);
+                    transform: translate(85px, 25px);
+          }
+          div:nth-child(2) {
+            display: none;
+          }
+        }
+
+        &_left_bottom {
+          div:nth-child(1) {
+            -webkit-transform: translate(16px, -26px);
+                    transform: translate(16px, -26px);
+          }
+          div:nth-child(2) {
+            margin-left: 35px;
+          }
+        }
+
+        &_right_top {
+          div {
+            -webkit-transform: translateX(-33px);
+                    transform: translateX(-33px);
+          }
+        }
+
+        &_right_bottom {
+          div:nth-child(1) {
+            -webkit-transform: translate(-33px, -63px);
+                    transform: translate(-33px, -63px);
+          }
+          div:nth-child(2) {
+            -webkit-transform: translate(-60px, -30px);
+                    transform: translate(-60px, -30px);
+          }
+          div:nth-child(3) {
+            -webkit-transform: translate(-60px, 0);
+                    transform: translate(-60px, 0);
+          }
+        }
+      }
+    }
+  }
 }
 
+.header-menu {
+  position: absolute;
+  z-index: 7;
+}
 
 
 @media only screen and (max-width : 1199px) {
