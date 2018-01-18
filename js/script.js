@@ -28,4 +28,9 @@ $(document).ready(function() {
     $(".mask").toggleClass("mask_show");
     $(".nav-bar").toggleClass("nav-bar_show");
   })
+
+  $(".write-us__form-block").click(function() {
+    $(".write-us__form-block").removeClass("write-us__input_span-up");
+    $(this).addClass("write-us__input_span-up");
+  })
 });
