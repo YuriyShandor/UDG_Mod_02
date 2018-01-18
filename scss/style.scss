@@ -792,6 +792,76 @@ body {
 #our-projects {
   padding-top: 95px;
   padding-bottom: 85px;
+
+  .section-title {
+    width: 365px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    .cover {
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .see-portfolio {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      position: relative;
+      margin-left: 65px;
+      font-family: Acrom;
+      font-size: 15px;
+      font-weight: 800;
+      color: $darkGreen;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-transition: all, .3s;
+      transition: all, .3s;
+
+      &::after {
+        position: absolute;
+        top: 20px;
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: darken($darkGreen, 10%);
+        -webkit-transition: all, .3s;
+        transition: all, .3s;
+      }
+
+      &:hover {
+        color: darken($darkGreen, 10%);
+        &::after {
+          width: 100%;
+        }
+      }
+
+      img {
+        margin-left: 11px;
+      }
+    }
+  }
+
+  .projects-block {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: inherit;
+    padding: 0 15px 0 30px;
+  }
 }
 
 .section-title {
@@ -874,20 +944,350 @@ body {
   }
 }
 
-@media only screen and (max-width : 1199px) {
+.projects {
+  width: 760px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
+  &__item {
+    width: 350px;
+    height: 350px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 118px 38px 0 34px;
+    margin: 15px;
+    position: relative;
+    -webkit-transition: all, .3s;
+    transition: all, .3s;
+
+    h3 {
+      font-family: Acrom;
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+      z-index: 2;
+    }
+
+    span {
+      margin-top: 23px;
+      font-size: 18px;
+      font-weight: 300;
+      color: #fff;
+      z-index: 2;
+      display: none;
+    }
+
+    .udg-btn {
+      width: 115px;
+      margin-top: 38px;
+      -webkit-transition: all, .3s;
+      transition: all, .3s;
+      z-index: 2;
+      border: 1px solid #439c92;
+      background: #439c92;
+    }
+
+    &:nth-child(1) {
+      background: url(../img/project-item__bg_01.jpg) no-repeat center / cover;
+    }
+
+    &:nth-child(2) {
+      background: url(../img/project-item__bg_02.jpg) no-repeat center / cover;
+    }
+
+    &:nth-child(3) {
+      background: url(../img/project-item__bg_03.jpg) no-repeat center / cover;
+    }
+
+    &:nth-child(4) {
+      background: url(../img/project-item__bg_04.jpg) no-repeat center / cover;
+    }
+
+    &:hover {
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 77, 64, 0.75);
+        z-index: 1;
+      }
+
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05);
+      padding-top: 81px;
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+              box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+
+      h3 {
+        text-decoration: underline;
+        -webkit-text-decoration-color: $lightGreen;
+                text-decoration-color: $lightGreen;
+      }
+
+      span {
+        display: block;
+      }
+
+      .udg-btn {
+        background: transparent;
+        border: 1px solid #439c92;
+
+        &:hover {
+          background: darken(#439c92, 10%);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 1199px) {
+  #our-projects {
+    padding-top: 85px;
+    padding-bottom: 75px;
+
+    .section-title {
+      width: 325px;
+    }
+
+    .projects-block {
+      padding: 0 15px 0 30px;
+    }
+  }
+
+  .projects {
+    width: 582px;
+
+    &__item {
+      width: 271px;
+      height: 271px;
+      padding: 70px 20px 0 20px;
+      margin: 10px;
+
+      h3 {
+        font-size: 26px;
+      }
+
+      span {
+        margin-top: 15px;
+        font-size: 16px;
+      }
+
+      .udg-btn {
+        margin-top: 18px;
+      }
+
+      &:hover {
+        padding: 30px 20px 0 20px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 991px) {
+  #our-projects {
+    padding-top: 50px;
+    padding-bottom: 35px;
 
+    .section-title {
+      width: 325px;
+    }
+
+    .projects-block {
+      padding: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 43px;
+  }
+
+  .projects {
+    width: inherit;
+    margin: 0 -10px;
+
+    &__item {
+      width: 340px;
+      height: 340px;
+      padding: 125px 20px 0 45px;
+
+      h3 {
+        font-size: 28px;
+      }
+
+      span {
+        margin-top: 15px;
+        font-size: 16px;
+      }
+
+      .udg-btn {
+        margin-top: 38px;
+      }
+
+      &:hover {
+        &:before {
+          background: rgba(0, 0, 0, 0.3);
+        }
+
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        padding: 125px 20px 0 45px;
+
+        h3 {
+          text-decoration: none;
+        }
+
+        span {
+          display: none;
+        }
+
+        .udg-btn {
+          background: #43909c;
+          border: 1px solid #43909c;
+
+          &:hover {
+            background: darken(#439c92, 10%);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 767px) {
+  #our-projects {
+    padding-top: 25px;
+    padding-bottom: 53px;
 
+    .section-title {
+      width: inherit;
+
+      .see-portfolio {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 43px;
+
+    &__rectangles {
+      .rectangles_darkGreen {
+        width: 16px;
+        height: 16px;
+      }
+
+      .rectangle-cover {
+        .rectangles_green {
+          &:nth-child(1) {
+            width: 12px;
+            height: 12px;
+            margin-top: 6px;
+            margin-right: 4px;
+          }
+
+          &:nth-child(2) {
+            width: 9px;
+            height: 9px;
+            margin-top: 6px;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+  }
+
+  .projects {
+    width: inherit;
+    margin: 0 -10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    &__item {
+      width: 350px;
+      height: 350px;
+      padding: 125px 20px 0 45px;
+      background: rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+              box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .udg-btn {
+        margin-top: 38px;
+      }
+
+      &:hover {
+        &:before {
+          display: none;
+        }
+
+        .udg-btn {
+          background: #439c92;
+          border: 1px solid #439c92;
+
+          &:hover {
+            background: darken(#439c92, 10%);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width : 520px) {
+  .section-title {
+    margin-bottom: 20px;
+  }
 
+  .projects {
+    margin: 0 auto;
+    &__item {
+      width: 290px;
+      height: 367px;
+      padding: 135px 20px 0 30px;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .udg-btn {
+        margin-top: 27px;
+      }
+
+      &:hover {
+        padding: 135px 20px 0 30px;
+      }
+    }
+  }
 }
 
 
