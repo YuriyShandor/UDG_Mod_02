@@ -33,4 +33,17 @@ $(document).ready(function() {
     $(".write-us__form-block").removeClass("write-us__input_span-up");
     $(this).addClass("write-us__input_span-up");
   })
+
+  $('a[href^="#"]').on('click',function (e) {
+	  e.preventDefault();
+
+	  var target = this.hash;
+	  var $target = $(target);
+
+	  $('html, body').stop().animate({
+	     'scrollTop': $target.offset().top
+	    }, 700, 'swing', function () {
+	      window.location.hash = target;
+	  });
+	});
 });
